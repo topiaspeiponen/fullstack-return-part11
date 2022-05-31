@@ -23,12 +23,13 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "webpack-dev-server --open --mode development",
+    "start": "cross-env NODE_ENV=test  webpack-dev-server --open --mode development",
     "build": "webpack --mode production",
     "start-prod": "node index.js",
+    "start-prod-test": "cross-env NODE_ENV=test node index.js",
     "test": "cross-env NODE_ENV=test jest ",
     "eslint": "eslint \"./**/*.{js,jsx}\"",
-    "test:e2e": "cross-env NODE_ENV=test cypress run"
+    "test:e2e": "cypress run"
   },
   "eslintConfig": {
     "extends": [
