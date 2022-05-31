@@ -28,9 +28,6 @@ app.get('/health', (_req, res) => {
   res.send('ok')
 })
 
-// eslint-disable-next-line no-console
-console.log('node env ', process.env.NODE_ENV)
-
 if (process.env.NODE_ENV === 'test') {
   const testRouter = require('./controllers/testing')
   app.use('/api/testing', testRouter)
