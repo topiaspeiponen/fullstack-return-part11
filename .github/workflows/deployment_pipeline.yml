@@ -11,9 +11,6 @@ on:
 jobs:
   simple_deployment_pipeline:
     runs-on: ubuntu-20.04
-     strategy:
-      matrix:
-        mongodb-version: ['4.2', '4.4', '5.0']
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v2
@@ -31,10 +28,6 @@ jobs:
           checkstring: "ok"
           delay: 10
           rollbackonhealthcheckfailed: true
-      - name: Start MongoDB
-        uses: supercharge/mongodb-github-action@1.7.0
-        with:
-          mongodb-version: ${{ matrix.mongodb-version }}
       - name: npm install 
         run: npm install   
       - name: lint
