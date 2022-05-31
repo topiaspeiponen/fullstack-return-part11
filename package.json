@@ -23,7 +23,9 @@
     "web-vitals": "^2.1.4",
     "supertest": "^6.2.2",
     "@testing-library/jest-dom": "^5.16.4",
-    "@testing-library/react": "^13.3.0"
+    "@testing-library/react": "^13.3.0",
+    "@testing-library/user-event": "^14.2.0",
+    "cypress": "^9.7.0",
   },
   "scripts": {
     "start": "NODE_ENV=test  webpack-dev-server --open --mode development",
@@ -45,11 +47,9 @@
     "@babel/plugin-transform-runtime": "^7.18.2",
     "@babel/preset-env": "^7.18.2",
     "@babel/preset-react": "^7.17.12",
-    "@testing-library/user-event": "^14.2.0",
     "babel-jest": "^25.5.1",
     "babel-loader": "^8.1.0",
     "css-loader": "^3.5.3",
-    "cypress": "^9.7.0",
     "eslint": "^6.8.0",
     "eslint-plugin-cypress": "^2.12.1",
     "eslint-plugin-jest": "^26.4.5",
