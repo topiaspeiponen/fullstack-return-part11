@@ -28,7 +28,7 @@
     "start-prod": "node index.js",
     "test": "cross-env NODE_ENV=test jest ",
     "eslint": "eslint \"./**/*.{js,jsx}\"",
-    "test:e2e": "cypress run"
+    "test:e2e": "cross-env NODE_ENV=test cypress run"
   },
   "eslintConfig": {
     "extends": [
