@@ -1,3 +1,5 @@
+const baseUrl = 'https://mighty-scrubland-74253.herokuapp.com'
+
 describe('Blog app', function() {
     const user = {
         name: 'Testi testailija',
@@ -20,9 +22,9 @@ describe('Blog app', function() {
     }
 
 	beforeEach(function() {
-		cy.request('POST', 'http://localhost:3003/api/testing/reset')
-        cy.request('POST', 'http://localhost:3003/api/users/', user)
-		cy.visit('http://localhost:3000')
+		cy.request('POST', `${baseUrl}/api/testing/reset`)
+        cy.request('POST', `${baseUrl}/api/users/`, user)
+		cy.visit(baseUrl)
 	})
 
 	it('Login form is shown', function() {
