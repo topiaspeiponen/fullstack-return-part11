@@ -5,7 +5,6 @@
 /.pnp
 .pnp.js
 
-webpack.config.js
 dist/
 
 
