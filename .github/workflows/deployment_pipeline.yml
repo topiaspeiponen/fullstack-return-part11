@@ -43,6 +43,10 @@ jobs:
           SECRET: ${{secrets.SECRET}}
       - name: e2e tests
         uses: cypress-io/github-action@v2
+        env:
+          MONGODB_TEST_URI: ${{secrets.MONGODB_TEST_URI}}
+          MONGODB_URI: ${{secrets.MONGODB_URI}}
+          SECRET: ${{secrets.SECRET}}
         with:
           command: npm run test:e2e
           start: npm run start-prod-test
